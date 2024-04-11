@@ -10,9 +10,9 @@ def encoder(password):
     return ''.join(map(str, encoded))
 
 
-'''def decoder(encoded_password):
-
-'''
+def decoder(encoded_password):
+    decoded = [(int(char) - 3) % 10 for char in encoded_password]
+    return ''.join(map(str, decoded))
 
 
 def main():
